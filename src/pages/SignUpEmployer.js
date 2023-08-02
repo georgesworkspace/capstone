@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function SignUpImmigrant() {
+export default function SignUpEmployer() {
   const [error, setError] = useState();
   const navigate = useNavigate();
 
@@ -13,9 +13,13 @@ export default function SignUpImmigrant() {
 
     // POST request to login with username/password
     axios
-      .post("http://localhost:8080/user/signup", {
+      .post("http://localhost:8080/user/signupemployer", {
         username: event.target.username.value,
         password: event.target.password.value,
+        companycontact: event.target.contact.value,
+        companylocation: event.target.location.value,
+        companydescription: event.target.description.value,
+        companyname: event.target.name.value,
       })
       .then((response) => {
         console.log(response);
@@ -31,13 +35,24 @@ export default function SignUpImmigrant() {
   return (
     <main className="login-page">
       <form className="login" onSubmit={handleSubmit}>
-        <h1 className="login__title">SignUp -- Immigrant</h1>
+        <h1 className="login__title">SignUp -- Employer</h1>
 
         <label>Username:</label>
         <input type="text" name="username" />
 
         <label>Password:</label>
         <input type="password" name="password" />
+
+        <label>Name:</label>
+        <input type="text" name="name" />
+
+        <label>Location:</label>
+        <input type="text" name="location" />
+
+        <label>Description:</label>
+        <input type="text" name="description" />
+        <label>Contact:</label>
+        <input type="text" name="contact" />
 
         {error && <div className="login__message">{error}</div>}
 

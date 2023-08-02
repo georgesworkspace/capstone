@@ -1,0 +1,30 @@
+@use "../styles/typography" as *;
+.welcome{
+    &-text{
+    font-family: "Avenir regular";
+    line-height: 30px;
+    font-size: 1.3rem;
+    margin-left:35rem;
+    margin-right:35rem;
+}
+&-button{
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    background-color: transparent;
+    border:1px solid white;
+    border-radius: 20px;
+    width:120px;
+    height:40px;
+    color:white;
+    font-size: 1.3rem;
+    justify-content: center;
+    &-div{
+        display: flex;
+        justify-content: center;
+    }
+}
+&-title{
+    display: flex;
+    justify-content: center;
+}
+}

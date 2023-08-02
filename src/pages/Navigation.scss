@@ -1,0 +1,40 @@
+@use "../styles/typography";
+.Nav {
+  background-image: url("../assets//image-asset.jpeg");
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 10rem;
+  &image {
+    width: 20%;
+  }
+  &-home {
+    text-decoration: none;
+    color: black;
+    margin-top: 3.5rem;
+    font-family: "Avenir bold";
+  }
+  &-helper {
+    text-decoration: none;
+    color: black;
+    margin-top: 3.5rem;
+    font-family: "Avenir bold";
+  }
+  &-employer {
+    text-decoration: none;
+    color: black;
+    margin-top: 3.5rem;
+    font-family: "Avenir bold";
+  }
+}
+.Chinese {
+  text-decoration: none;
+  color: black;
+  margin-top: 3.5rem;
+  font-family: "Avenir bold";
+}
+.English {
+  text-decoration: none;
+  color: black;
+  margin-top: 3.5rem;
+  font-family: "Avenir bold";
+}

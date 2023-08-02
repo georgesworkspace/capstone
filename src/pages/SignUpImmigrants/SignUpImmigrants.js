@@ -1,10 +1,9 @@
 import { useState } from "react";
-import "./Login.scss";
+// import "./Login.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Navigation from "../Navigation";
-// import "./Login.scss";
-export default function Login() {
+// import "./SignUpImmigrants.scss";
+export default function SignUpImmigrant() {
   const [error, setError] = useState();
   const navigate = useNavigate();
 
@@ -14,24 +13,14 @@ export default function Login() {
 
     // POST request to login with username/password
     axios
-      .post("http://localhost:8080/user/login", {
+      .post("http://localhost:8080/user/signup", {
         username: event.target.username.value,
         password: event.target.password.value,
       })
-      .then(({ data }) => {
-        console.log(data);
-        setError(undefined);
-        // store the token from the server
-        localStorage.authToken = data.token;
+      .then((response) => {
+        console.log(response);
 
-        if (data.user.helper) {
-          navigate("/helper");
-        } 
-        if(data.user.employer)
-        { navigate("/employer");}
-        else {
-          navigate("/immigrant");
-        }
+        navigate("/login");
       })
       .catch((error) => {
         // if it failed?! do something
@@ -40,10 +29,9 @@ export default function Login() {
   };
 
   return (
-    <><Navigation></Navigation>
     <main className="login-page">
       <form className="login" onSubmit={handleSubmit}>
-        <h1 className="login__title">Log in</h1>
+        <h1 className="login__title">SignUp -- Immigrant</h1>
 
         <label>Username:</label>
         <input type="text" name="username" />
@@ -53,9 +41,8 @@ export default function Login() {
 
         {error && <div className="login__message">{error}</div>}
 
-        <button className="login__button">Log in</button>
+        <button className="login__button">Sign up</button>
       </form>
     </main>
-    </>
   );
 }

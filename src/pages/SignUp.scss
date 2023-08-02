@@ -1,0 +1,18 @@
+@use "../styles/typography";
+.signup{
+    &-title{
+        font-family: "Avenir bold";
+    }
+    &-immigrant{
+        font-family: "Avenir regular";
+        text-decoration: none;
+    }
+    &-employer{
+        font-family: "Avenir regular";
+        text-decoration: none;
+    }
+    &-helper{
+        font-family: "Avenir regular";
+        text-decoration: none;
+    }
+}

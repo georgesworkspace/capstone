@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Modal } from "@mui/material";
 import axios from "axios";
 import Navigation from "./Navigation";
 import Service from "./Service";
 import Gallery from "./Gallery.js";
+import "./Employer.scss";
+import { Modal } from "@mui/material";
+function Employer() {
+  const [user, setUser] = useState(null);
 
-import "./Helper.scss";
-function Helper() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -17,8 +18,6 @@ function Helper() {
     localStorage.removeItem("authToken");
     navigate("/");
   }
-  const [user, setUser] = useState(null);
-  console.log(user);
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     console.log(token);
@@ -42,11 +41,12 @@ function Helper() {
     <div>
       <div className="grouper-div">
         <Navigation></Navigation>
-        <h1 className="welcome-title">Hello Helper,{user.username}</h1>
+        <h1 className="welcome-title"> Hello Employer,{user.username}</h1>
         <p className="welcome-text">
-          Thank you for spending time on helping others.Your help can greatly
-          imppact out new immigrants. Due to your help, they can find a better
-          path.It is a honour to have people like you in our communities.
+          Thank you for offering jobs to new immigrants.We understand that you
+          many have certain conerns. We will do our best to prove that new
+          immigrants can be a powerful work force. Your offer can change their
+          life.
         </p>
         <div className="welcome-button-div">
           <button className="welcome-button" onClick={handleOpen}>
@@ -76,4 +76,4 @@ function Helper() {
   );
 }
 
-export default Helper;
+export default Employer;

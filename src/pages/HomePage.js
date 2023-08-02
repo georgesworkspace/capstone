@@ -1,18 +1,17 @@
-import { Link } from "react-router-dom";
 
+import Gallery from "./Gallery.js";
+import JoinUs from "./JoinUs";
+import Service from "./Service";
+import StyleGrouperUser from "./StyleGrouperUser.js";
 function HomePage() {
   return (
-    <div>
-      <h1>WelcomeCAN</h1>
-      <ul>
-        <li>
-          <Link to="/signup">Signup</Link>
-        </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-      </ul>
-    </div>
+    <>
+        <StyleGrouperUser></StyleGrouperUser>
+        <Service></Service>
+        <Gallery></Gallery>
+        <JoinUs></JoinUs>
+      
+    </>
   );
 }
 

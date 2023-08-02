@@ -39,15 +39,10 @@ function Immigrant() {
     <>
       <div>
         <Navigation></Navigation>
-        <h1>Hello Immigrant</h1>
+        <h1>您好 移民</h1>
         <h2>{user.username}</h2>
         <p className="welcome-text">
-          Thank you for visiting our site. We are here to provide information,
-          support, and guidance to new Canadian immigrants. Whether you need
-          assistance with language translation or help navigating the
-          immigration process, we've got you covered. Feel free to explore our
-          platform and discover all the resources available to help make your
-          Canadian journey smooth and successful.
+          感谢您访问我们的网站。我们致力于为新加拿大移民提供信息、支持和指导。无论您需要语言翻译的帮助还是在移民过程中的指引，我们都可以为您提供支持。请随意浏览我们的平台，发现所有可用的资源，帮助您顺利并成功地展开您的加拿大之旅。
         </p>
         <Service></Service>
         <Gallery></Gallery>

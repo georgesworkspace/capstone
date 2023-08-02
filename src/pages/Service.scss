@@ -1,0 +1,26 @@
+@use "../styles/typography" as *;
+.service{
+    margin-top: 3rem;
+    &-title{
+font-size: 2rem;
+font-family: "Avenir bold";
+display: flex;
+justify-content: center;
+margin-bottom: 5rem;
+    }
+    &-content{
+    display:flex ;
+    }
+    &-subheader{
+    display: flex;
+    justify-content: center;
+    font-family: "Avenir bold"; 
+    font-size: 1.5rem;
+    }
+    &-text{
+      font-family: "Avenir regular"; 
+      margin-left: 4rem;
+      margin-right:4rem; 
+      line-height: 22px;
+    }
+}
