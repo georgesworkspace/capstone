@@ -1,7 +1,11 @@
 @use '../styles/typography';
 .gallery{
+    background-color: beige;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 &-content{
     display: flex;
+    padding-top: 2rem;
     justify-content: space-around;
 }
 &-image{

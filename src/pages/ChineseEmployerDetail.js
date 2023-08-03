@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import Navigation from "./Navigation";
 const url = "http://localhost:8080";
-function EmployerDetail(){
+function ChineseEmployerDetail(){
     const[employerDetail,setEmployerDetail]=useState(null)
     useEffect(()=>{
 axios.get(`${url}/employer`)
@@ -41,4 +41,4 @@ return(
     </>
 )
 }
-export default EmployerDetail
+export default ChineseEmployerDetail

@@ -1,18 +1,49 @@
 @use "../styles/typography";
+
 .signup{
+   
+    background-image: url("../assets/image-asset.jpeg");
+    background-size: cover;
+    min-height:100vh;
     &-title{
         font-family: "Avenir bold";
+        display: flex;
+        justify-content: center;
+        color: black;
+        font-size: 4rem;
+    padding-top: 3rem;
+        
     }
     &-immigrant{
+        margin-top: 10rem;
         font-family: "Avenir regular";
         text-decoration: none;
+        display: flex;
+        justify-content: center;
+        color: black;
+        font-size: 2.5rem;
+        margin-bottom: 10rem;
     }
     &-employer{
         font-family: "Avenir regular";
         text-decoration: none;
+        display: flex;
+        justify-content: center;
+        color: black;
+        font-size: 2.5rem;
+        margin-bottom: 10rem;
     }
     &-helper{
         font-family: "Avenir regular";
         text-decoration: none;
+        display: flex;
+        justify-content: center;
+        color: black;
+        font-size: 2.5rem;
+        margin-bottom: 10rem;
+    }
+    &-list{
+        text-decoration: none;
+        list-style-type:none;
     }
 }

@@ -11,6 +11,12 @@ import HelperDetail from "./pages/HelperDetail";
 import EmployerDetail from "./pages/EmployerDetail";
 import Chinese from "./pages/Chinese";
 import Employer from "./pages/Employer";
+import ChineseHelper from "./pages/ChineseHelper";
+import ChineseEmployer from "./pages/ChineseEmployer";
+import ChineseEmployerDetail from "./pages/ChineseEmployerDetail";
+import ChineseHelperDetail from "./pages/ChineseHelperDetail";
+import ChineseLogin from "./pages/ChineseLogin";
+import ChineseNavigation from "./pages/ChineseNavigation";
 function App() {
 
 
@@ -30,6 +36,13 @@ function App() {
         <Route path="/employerdetail" element={<EmployerDetail />} />
         <Route path="/employer" element={<Employer />} />
         <Route path="/chinese" element={<Chinese />} />
+        <Route path="/signupchinese" element={<Chinese />} />
+        <Route path="/loginchinese" element={<ChineseLogin />} />
+        <Route path="/helperchinese" element={<ChineseHelper />} />
+        <Route path="/employerchinese" element={<ChineseEmployer />} />
+        <Route path="/immigrantchinese" element={<Chinese />} />
+        <Route path="/helperdetailchinese" element={<ChineseHelperDetail />} />
+        <Route path="/employerdetailchinese" element={<ChineseEmployerDetail />} />
       </Routes>
     </BrowserRouter>
   );

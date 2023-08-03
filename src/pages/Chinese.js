@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom";
-import Navigation from "./Navigation";
+import ChineseService from "./ChineseService.js";
 import Gallery from "./Gallery.js";
-import JoinUs from "./JoinUs";
-import Service from "./Service";
+import ChineseNavigation from "./ChineseNavigation.js";
+import ChineseJoinUs from "./ChineseJoinUs.js";
 function Chinese() {
   return (
     <>
-    <Navigation></Navigation>
+    <ChineseNavigation></ChineseNavigation>
     <div>
       <h1>欢迎您，游客</h1>
       <ul>
         <li>
-        <Link to="/login">登录</Link>
+        <Link to="/loginchinese">登录</Link>
         </li>
       </ul>
-      <Service></Service>
+      <ChineseService></ChineseService>
       <Gallery></Gallery>
-      <JoinUs></JoinUs>
+      <ChineseJoinUs></ChineseJoinUs>
     </div>
     </>
   );
