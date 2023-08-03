@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./Login/Login.scss";
+// import "./Login.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./SignUpHelper.scss"
 import ChineseNavigation from "./ChineseNavigation";
-// import "./Login.scss";
-export default function ChineseLogin() {
+export default function ChineseSignUpHelper() {
   const [error, setError] = useState();
   const navigate = useNavigate();
 
@@ -14,24 +14,16 @@ export default function ChineseLogin() {
 
     // POST request to login with username/password
     axios
-      .post("http://localhost:8080/user/login", {
+      .post("http://localhost:8080/user/signuphelper", {
         username: event.target.username.value,
         password: event.target.password.value,
+        helpercontact: event.target.contact.value,
+        helperregion: event.target.region.value,
       })
-      .then(({ data }) => {
-        console.log(data);
-        setError(undefined);
-        // store the token from the server
-        localStorage.authToken = data.token;
+      .then((response) => {
+        console.log(response);
 
-        if (data.user.helper) {
-          navigate("/helperchinese");
-        } 
-        if(data.user.employer)
-        { navigate("/employerchinese");}
-        else {
-          navigate("/immigrantchinese");
-        }
+        navigate("/login");
       })
       .catch((error) => {
         // if it failed?! do something
@@ -40,20 +32,27 @@ export default function ChineseLogin() {
   };
 
   return (
-    <><ChineseNavigation></ChineseNavigation>
+    <>
+    <ChineseNavigation></ChineseNavigation>
     <main className="login-page">
       <form className="login" onSubmit={handleSubmit}>
-        <h1 className="login__title">登录</h1>
+        <h1 className="login__title">注册志愿者</h1>
 
         <label className="login__label">用户名:</label>
-        <input className="login__input"  type="text" name="username" />
+        <input type="text" name="username" className="login__input" />
 
         <label className="login__label">密码:</label>
-        <input  className="login__input" type="password" name="password" />
+        <input type="password" name="password" className="login__input" />
+
+        <label className="login__label">联系方式:</label>
+        <input type="text" name="contact" className="login__input" />
+
+        <label className="login__label">志愿地区:</label>
+        <input type="text" name="region" className="login__input" />
 
         {error && <div className="login__message">{error}</div>}
 
-        <button className="login__button">登录</button>
+        <button className="login__button">注册</button>
       </form>
     </main>
     </>

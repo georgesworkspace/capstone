@@ -1,44 +1,92 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import Navigation from "./Navigation";
+import ChineseNavigation from "./ChineseNavigation";
+import "./EmployerDetail.scss"
 const url = "http://localhost:8080";
 function ChineseEmployerDetail(){
-    const[employerDetail,setEmployerDetail]=useState(null)
-    useEffect(()=>{
-axios.get(`${url}/employer`)
-.then((response)=>{
-setEmployerDetail(response)
-})
-    },[])
-if(!employerDetail){
-    return<>...Loading...</>
-}
-return(
-    <>
-    <Navigation></Navigation>
-    <div className="employer">
-        <p className="employer-intro">Connect with employers who are willing to hire Chinese immigrants directly</p>
-        <p className="employer-intro">Contact now and be ahead of other competitors</p>
-   <ul className="employer-list">
-   {employerDetail.map((employer)=>{
-return(
-    <li>
-        <p>Company Name</p>
-         <p className="employer-name">{employer.name}</p>
-         <p>Company Address</p>
-        <p className="employer-location">{employer.location}</p>
-        <p>Company Description</p>
-        <p className="employer-description">{employer.description}</p>
-        <p>Company Contact</p>
-        <p className="employer-contact">{employer.contact}</p>
-    </li>
-)
-   })
-
-   }
-   </ul>
-    </div>
-    </>
-)
-}
+    const [employerDetail, setEmployerDetail] = useState(null);
+    useEffect(() => {
+      axios.get(`${url}/employer`).then((response) => {
+        setEmployerDetail(response.data);
+      });
+    }, []);
+    if (!employerDetail) {
+      return <>...Loading...</>;
+    }
+  
+    if (!localStorage.getItem("authToken")) {
+      return <div>You are not logged in. Please go back and log in.</div>;
+    }
+  
+    return (
+      <>
+        <ChineseNavigation></ChineseNavigation>
+        <div className="employer">
+          <p className="employer-intro">
+          与愿意直接雇佣中国移民的雇主联系
+          </p>
+          <p className="employer-intro">
+          立即联系并领先其他竞争者
+          </p>
+          <div className="employer-title">
+            <p>公司名称</p>
+            <p>公司地址</p>
+            <p>联系方式</p>
+            {/* <p>Employer Description</p> */}
+          </div>
+          <div className="employer-div">
+          <ul className="employer-list">
+            {employerDetail.map((employer) => {
+              return (
+                <li className="employer-element">
+                  <div>
+                    
+                    <p className="employer-name">{employer.companyname}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="employer-list">
+            {employerDetail.map((employer) => {
+              return (
+                <li className="employer-element">
+                  <div>
+                    
+                    <p className="employer-name">{employer.companylocation}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="employer-list">
+            {employerDetail.map((employer) => {
+              return (
+                <li className="employer-element">
+                  <div>
+                   
+                    <p className="employer-name">{employer.companycontact}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+          {/* <ul className="employer-list">
+            {employerDetail.map((employer) => {
+              return (
+                <li className="employer-element">
+                  <div>
+                    
+                    <p className="employer-name">{employer.companydescription}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul> */}
+          </div>
+          
+        </div>
+      </>
+    );
+  }
 export default ChineseEmployerDetail

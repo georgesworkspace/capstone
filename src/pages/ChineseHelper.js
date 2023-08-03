@@ -5,6 +5,7 @@ import ChineseNavigation from "./ChineseNavigation.js";
 import Gallery from "./Gallery.js";
 import ChineseService from "./ChineseService";
 import { Modal } from "@mui/material";
+import "./Helper.scss"
 function ChineseHelper() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);

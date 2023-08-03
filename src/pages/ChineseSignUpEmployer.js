@@ -3,8 +3,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./SignUpEmployer.scss"
-import Navigation from "./Navigation";
-export default function SignUpEmployer() {
+import ChineseNavigation from "./ChineseNavigation";
+export default function ChineseSignUpEmployer() {
   const [error, setError] = useState();
   const navigate = useNavigate();
 
@@ -35,31 +35,31 @@ export default function SignUpEmployer() {
 
   return (
     <>
-    <Navigation></Navigation>
+    <ChineseNavigation></ChineseNavigation>
     <main className="login-page">
       <form className="login" onSubmit={handleSubmit}>
-        <h1 className="login__title">SignUp -- Employer</h1>
+        <h1 className="login__title">注册新雇主</h1>
 
-        <label className="login__label">Username:</label>
+        <label className="login__label">用户名：</label>
         <input type="text" name="username" className="login__input"/>
 
-        <label  className="login__label">Password:</label>
+        <label  className="login__label">密码:</label>
         <input type="password" name="password"className="login__input" />
 
-        <label  className="login__label">Name:</label>
+        <label  className="login__label">公司名称:</label>
         <input type="text" name="name" className="login__input"/>
 
-        <label  className="login__label">Location:</label>
+        <label  className="login__label">公司地址:</label>
         <input type="text" name="location" className="login__input"/>
 
-        <label  className="login__label">Description:</label>
+        <label  className="login__label">公司介绍:</label>
         <input type="text" name="description" className="login__description"/>
-        <label  className="login__label">Contact:</label>
+        <label  className="login__label">联系方式:</label>
         <input type="text" name="contact" className="login__input"/>
 
         {error && <div className="login__message">{error}</div>}
 
-        <button className="login__button">Sign up</button>
+        <button className="login__button">注册</button>
       </form>
     </main>
     </>
