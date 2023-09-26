@@ -42,7 +42,7 @@ function Helper() {
     <div>
       <div className="grouper-div">
         <Navigation></Navigation>
-        <h1 className="welcome-title">Hello Helper,{user.username}</h1>
+        <h1 className="welcome-title">Hello Volunteer,{user.username}</h1>
         <p className="welcome-text">
           Thank you for spending time on helping others.Your help can greatly
           imppact out new immigrants. Due to your help, they can find a better

@@ -39,8 +39,8 @@ function Immigrant() {
     <>
       <div>
         <Navigation></Navigation>
-        <h1>Hello Immigrant</h1>
-        <h2>{user.username}</h2>
+        <h1 className="welcome-title">Hello </h1>
+        <h2 className="welcome-title">{user.username}</h2>
         <p className="welcome-text">
           Thank you for visiting our site. We are here to provide information,
           support, and guidance to new Canadian immigrants. Whether you need

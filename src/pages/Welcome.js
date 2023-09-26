@@ -1,20 +1,16 @@
 import { Link } from "react-router-dom";
 import "./Welcome.scss";
+import photo from "../assets/photo.jpg"
 function Welcome() {
   return (
     <>
       <div>
-        <h1 className="welcome-title">Welcome, Guest</h1>
+        <h1 className="welcome-title">About me</h1>
+        <div className="grouper">
         <article className="welcome-text">
-          Thank you for visiting our site. We are here to provide information,
-          support, and guidance to new Canadian immigrants. Whether you need
-          assistance with language translation or help navigating the
-          immigration process, we've got you covered. Feel free to explore our
-          platform and discover all the resources available to help make your
-          Canadian journey smooth and successful.
+        I first became interested in programming when I was fifteen years old. I was using the Starcraft map editor to adjust a feature of the game. It was the first time I was exposed to code and although I only understood a small portion of it at the time, I was hooked.Since then I have completed a Data Analytics Internship and graduated from BrainStation’s Software Engineering bootcamp. I’m excited to use the software skills I have developed to contribute to your team.
         </article>
-        <div className="welcome-button-div">
-            <Link to="/login" className="welcome-link"><button className="welcome-button">Login</button></Link>
+        <img className="gallery-image" src={photo} alt="bond" />
             </div>
       </div>
     </>

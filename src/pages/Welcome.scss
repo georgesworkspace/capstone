@@ -4,18 +4,18 @@
     font-family: "Avenir regular";
     line-height: 30px;
     font-size: 1.3rem;
-    margin-left:35rem;
-    margin-right:35rem;
+    margin-left:20rem;
+    margin-right:5rem;
 }
 &-button{
     margin-top: 6rem;
     margin-bottom: 3rem;
     background-color: transparent;
-    border:1px solid white;
+    border:1px solid rgb(26, 26, 27);
     border-radius: 20px;
     width:120px;
     height:40px;
-    color:white;
+    color:rgb(13, 13, 14);
     font-size: 1.3rem;
     justify-content: center;
     &-div{
@@ -27,9 +27,19 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+    margin-top: 3rem;
+    color:darkslateblue;
 }
 }
 .Group-div{
-    background-image: url("../assets/image-asset.jpeg");
+   
+    // background-color: yellow;
     background-size: cover;
+}
+.grouper{
+    display: flex;
+}
+.gallery-image{
+    max-height: 20rem;
+    margin-right:10rem;
 }

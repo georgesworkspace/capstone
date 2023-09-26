@@ -8,11 +8,10 @@ function Navigation(){
     return(
         <>
         <div className="Nav">
-            <Link to='/' className="Nav-home">Home</Link>
-    <Link to="/helperdetail" className="Nav-helper">Volunteer</Link>
-    <Link to='/employerdetail'className="Nav-employer">Employer</Link>
-    <img  className='Navimage' src={logoImage}alt="image"/>
-    <Link to='/chinese' className="Chinese">中文</Link>
+            
+    <Link to="/helperdetail" className="Nav-helper">Projects</Link>
+    <Link to='/' className="Nav-home">Contact</Link>
+    <Link to='/chinese' className="Chinese"></Link>
     <Link to='/' className="English">English</Link>
 
     

@@ -8,7 +8,6 @@ import "./Employer.scss";
 import { Modal } from "@mui/material";
 function Employer() {
   const [user, setUser] = useState(null);
-
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
