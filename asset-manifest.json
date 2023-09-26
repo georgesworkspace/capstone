@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.04594b1c.css",
+    "main.js": "/react-gh-pages/static/js/main.b813b717.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/react-gh-pages/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/photo.jpg": "/react-gh-pages/static/media/photo.0558b3e14ca3196919b8.jpg",
+    "static/media/brain.png": "/react-gh-pages/static/media/brain.f8ec6cc349f86a49cfa6.png",
+    "static/media/instock.png": "/react-gh-pages/static/media/instock.9ad90ca4ba3bf0507b6b.png",
+    "static/media/AvenirNextLTPro.ttf": "/react-gh-pages/static/media/AvenirNextLTPro.3f6c730b0f59f3838d71.ttf",
+    "static/media/AvenirNextLTProBold.ttf": "/react-gh-pages/static/media/AvenirNextLTProBold.3c6bf152ce9d23ec3657.ttf",
+    "static/media/Logo.jpg": "/react-gh-pages/static/media/Logo.3f1d944e58fe25dfadd2.jpg",
+    "static/media/image-asset.jpeg": "/react-gh-pages/static/media/image-asset.69f0a93b1d9dd1f3265f.jpeg",
+    "index.html": "/react-gh-pages/index.html",
+    "static/media/iconmonstr-linkedin-3.svg": "/react-gh-pages/static/media/iconmonstr-linkedin-3.27a3f479ca1bbb0ceef19e395081fb94.svg",
+    "main.04594b1c.css.map": "/react-gh-pages/static/css/main.04594b1c.css.map",
+    "main.b813b717.js.map": "/react-gh-pages/static/js/main.b813b717.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/react-gh-pages/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04594b1c.css",
+    "static/js/main.b813b717.js"
+  ]
+}
