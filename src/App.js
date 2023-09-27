@@ -26,7 +26,32 @@ function App() {
 
 
   return (
-    <HomePage></HomePage>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup/immigrant" element={<SignUpImmigrant />} />
+        <Route path="/signup/helper" element={<SignUpHelper />} />
+        <Route path="/signup/employer" element={<SignUpEmployer />} />
+        <Route path="/immigrant" element={<Immigrant />} />
+        <Route path="/helper" element={<Helper />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/helperdetail" element={<HelperDetail />} />
+        <Route path="/employerdetail" element={<EmployerDetail />} />
+        <Route path="/employer" element={<Employer />} />
+        <Route path="/chinese" element={<Chinese />} />
+        <Route path="/signup/chinese" element={<ChineseSignUp />} />
+        <Route path="/signup/immigrant/chinese" element={<ChineseSignUpImmigrant />} />
+        <Route path="/signup/helper/chinese" element={<ChineseSignUpHelper />} />
+        <Route path="/signup/employer/chinese" element={<ChineseSignUpEmployer/>} />
+        <Route path="/loginchinese" element={<ChineseLogin />} />
+        <Route path="/helperchinese" element={<ChineseHelper />} />
+        <Route path="/employerchinese" element={<ChineseEmployer />} />
+        <Route path="/immigrantchinese" element={<ChineseImmigrant />} />
+        <Route path="/helperdetailchinese" element={<ChineseHelperDetail />} />
+        <Route path="/employerdetailchinese" element={<ChineseEmployerDetail />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
